@@ -1,6 +1,7 @@
 import './App.css';
 import { useState } from 'react';
 import styled from 'styled-components';
+import { MdKeyboardArrowDown } from 'react-icons/md';
 
 import Landing from './pages/Landing';
 import Navbar from './components/Navbar';
@@ -35,6 +36,42 @@ const Gradient2 = styled.span`
     filter: blur(100px);
     z-index: 0;
 
+`
+
+const Footer = styled.div`
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 50px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+`
+const DownArrow = styled(MdKeyboardArrowDown)`
+    color: #FFFFFF;
+
+    opacity: 0.2;
+    width: 60px;
+    height: 60px;
+
+    position: relative;
+    bottom: 15px;
+    transform: scaleX(2);
+
+    @media (min-width: 800px) {
+
+        margin-left: 140px;
+    }
+
+`
+
+const Content = styled.div`
+    @media (min-width: 800px) {
+
+        margin-left: 140px;
+    }
+    z-index: 10000;
 `
 
 function App() {
@@ -83,10 +120,14 @@ function App() {
             setActive = {changeActivePage}
             pages = {pages}
         />
-        {activeIndex === 0 && <Landing />}
-        {activeIndex === 1 && <Projects />}
-        {activeIndex === 2 && <Contact />}
-
+        <Content>
+            {activeIndex === 0 && <Landing />}
+            {activeIndex === 1 && <Projects />}
+            {activeIndex === 2 && <Contact />}
+        </Content>
+        <Footer>
+            {activeIndex !== 2 && <DownArrow />}
+        </Footer>
     </div>
   );
 }
