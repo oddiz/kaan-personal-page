@@ -23,6 +23,7 @@ const Title = styled.h1`
 
     font-weight: 400;
     margin-bottom: 5vh;
+    margin-top: 0px;
 
 `
 
@@ -30,9 +31,10 @@ const Paragraph = styled.p`
     font-size: 1.2em;
     font-weight: 300;
 
-    width: 550px;
+    max-width: 550px;
 
     margin:15px auto;
+
 
     
 `
@@ -60,7 +62,7 @@ function Landing() {
                 I’m Kaan “oddiz” Şarkaya, I love <Emphasized inputColor="#4BD6F4">computers</Emphasized>, <Emphasized inputColor="#B3FF52">technology</Emphasized> and writing <Emphasized inputColor="#FF9E47">spaghetti</Emphasized> code.
             </Paragraph>
             <Paragraph>
-                I am not a <Emphasized inputColor="#FF4747">programmer</Emphasized> however I binge code random months of the year as a hobby.  
+                I am not a professional <Emphasized inputColor="#FF4747">programmer</Emphasized> however I binge code random months of the year as a hobby.  
             </Paragraph>
         </FadeIn>
     </Content>

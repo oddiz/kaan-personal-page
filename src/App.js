@@ -8,7 +8,7 @@ import Projects from './pages/Projects';
 import Contact from './pages/Contact';
 
 const Gradient1 = styled.span`
-    position: absolute;
+    position: fixed;
     top: -750px;
     left: -750px;
 
@@ -22,7 +22,7 @@ const Gradient1 = styled.span`
     z-index: 0;
 `
 const Gradient2 = styled.span`
-    position: absolute;
+    position: fixed;
     bottom: -500px;
     right: -500px;
 

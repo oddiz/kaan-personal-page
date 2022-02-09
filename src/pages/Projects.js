@@ -1,44 +1,75 @@
 import styled from 'styled-components';
 import FadeIn from 'react-fade-in/lib/FadeIn';
+import ProjectBanner from '../components/ProjectBanner';
+import useWindowSize from '../components/useWindowSize';
+
+
+
 const Content = styled.div`
     width: 100%;
     height: auto;
+
+    margin-top: 20px;
 
     text-align: center;
 
     font-family: 'Ubuntu', sans-serif;
     color: white;
 
-    z-index: 10;
-
+    
+    
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
 
+    z-index: 10;
 `
 
-const ProjectLink = styled.a`
-    font-size: 1.5em;
-    font-weight: 500;
+const FadeInFlexed = styled(FadeIn)`
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    @media (max-width: 600px) {
+
+        flex-direction: column;
+    }
 `
 
 function Projects() {
+
+    const { width, height } = useWindowSize();
+     
+    let miniMode = false 
+
+    if (height < 620 || width < 600) {
+        miniMode =true
+    }
+
     return (
         <Content>
-            <FadeIn>
-                <h1>
-                    Coming soon
-                </h1>
-                <p>
-                    <ProjectLink target="_blank" href="https://ecodiet.kaansarkaya.com"> Ecodiet </ProjectLink> - Diet calculator for Eco game
-                </p>
-                <p>
-                    <ProjectLink target="_blank" href="https://botdiz.kaansarkaya.com"> Botdiz </ProjectLink> - Discord bot that plays music and more
+            <FadeInFlexed>
+                <ProjectBanner 
+                    title="Ecodiet"
+                    description={`Skillpoint calculator based on what you eat for Eco game.\n\nThis is the first app that I've made after completing an Udemy course for JS and web developement.\n\nFeatures a simple vanilla js frontend + backend for storing highscores.`}
+                    link="https://ecodiet.kaansarkaya.com/"
+                    backgroundImage="img/ecodiet_logo.png"
+                    backgroundColor="#5A5C84"
+                    miniMode = {miniMode}
+                />
+                <ProjectBanner 
+                    title="Botdiz"
+                    description={`A music bot for discord.\n\nFeatures a nice web interface to control the music player and even import spotify playlists into it.\n\nMy first React webpage and proper full stack project including MongoDB, external and internal auth, websockets.`}
+                    link="https://botdiz.kaansarkaya.com/"
+                    backgroundImage="img/botdiz_logo.png"
+                    backgroundColor="linear-gradient(132deg, rgba(31,29,40,1) 44%, rgba(44,44,62,1) 60%);"
+                    miniMode = {miniMode}
 
-                </p>
+                />
                 
 
-            </FadeIn>
+            </FadeInFlexed>
         </Content>
     )
 }
