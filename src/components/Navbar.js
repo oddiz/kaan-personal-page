@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import {useState} from 'react';
 
 const NavbarContainer = styled.div`
     display: flex;

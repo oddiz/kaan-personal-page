@@ -16,23 +16,23 @@ const Gradient1 = styled.span`
     width: 1280px;
     height: 1280px;
 
-    background: #094347AA;
+    background: #0943478A;
 
-    filter: blur(2000px);
+    filter: blur(100px);
     z-index: 0;
 `
 const Gradient2 = styled.span`
     position: absolute;
-    bottom: -300px;
-    right: -250px;
+    bottom: -500px;
+    right: -500px;
 
     border-radius: 100%;
-    width: 780px;
-    height: 780px;
+    width: 980px;
+    height: 980px;
 
     background: #102F53AA;
 
-    filter: blur(2000px);
+    filter: blur(100px);
     z-index: 0;
 
 `
