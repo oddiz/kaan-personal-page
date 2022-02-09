@@ -1,23 +1,92 @@
-import logo from './logo.svg';
 import './App.css';
+import { useState } from 'react';
+import styled from 'styled-components';
+
+import Landing from './pages/Landing';
+import Navbar from './components/Navbar';
+import Projects from './pages/Projects';
+import Contact from './pages/Contact';
+
+const Gradient1 = styled.span`
+    position: absolute;
+    top: -750px;
+    left: -750px;
+
+    border-radius: 100%;
+    width: 1280px;
+    height: 1280px;
+
+    background: #094347AA;
+
+    filter: blur(2000px);
+    z-index: 0;
+`
+const Gradient2 = styled.span`
+    position: absolute;
+    bottom: -300px;
+    right: -250px;
+
+    border-radius: 100%;
+    width: 780px;
+    height: 780px;
+
+    background: #102F53AA;
+
+    filter: blur(2000px);
+    z-index: 0;
+
+`
 
 function App() {
+    const [activeIndex, setActiveIndex] = useState(0);
+
+    const [lastPageChange, setLastPageChange] = useState(0);
+
+    const pages = [
+        "ABOUT ME", "PROJECTS", "CONTACT"
+    ]
+
+    function changeActivePage(index) {
+        setActiveIndex(index);
+        setLastPageChange(Date.now());
+        console.log(index, Date.now());
+    }
+
+    function wheelListener(e) {
+        if (lastPageChange + 400 > Date.now()) {
+            return
+        }
+
+        if (e.deltaY < 0) {
+            //wheel down
+            if (activeIndex > 0) {
+                changeActivePage(activeIndex - 1);
+            }
+        } else if(e.deltaY > 0) {
+            //wheel up
+
+            if (activeIndex < pages.length - 1) {
+                changeActivePage(activeIndex + 1);
+            }
+        }
+    }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div 
+        className="App" 
+        onWheel = {(e) => wheelListener(e)}
+    >
+        <Gradient1 />
+        <Gradient2 />
+        <Navbar 
+            activeIndex = {activeIndex}
+            setActive = {changeActivePage}
+            pages = {pages}
+        />
+        {activeIndex === 0 && <Landing />}
+        {activeIndex === 1 && <Projects />}
+        {activeIndex === 2 && <Contact />}
+
     </div>
   );
 }

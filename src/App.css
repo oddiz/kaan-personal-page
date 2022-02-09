@@ -1,38 +1,49 @@
+
+
 .App {
   text-align: center;
-}
+  background: #072038;
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
+  width: 100vw;
+  height: 100vh;
+  min-height: 320px;
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
+  overflow: hidden;
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
-  align-items: center;
+
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+
+@font-face {
+    font-family: 'Ubuntu';
+    font-weight: 300;
+    src: local('Ubuntu'), url(./fonts/Ubuntu-Light.ttf) format('opentype');
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+@font-face {
+    font-family: 'Ubuntu';
+    font-weight: 400;
+
+    src: local('Ubuntu'), url(./fonts/Ubuntu-Regular.ttf) format('opentype');
+  }  
+  
+  @font-face {
+      font-family: 'Ubuntu';
+      font-weight: 500;
+      src: local('Ubuntu'), url(./fonts/Ubuntu-Medium.ttf) format('opentype');
+    }
+    
+@font-face {
+    font-family: 'Ubuntu';
+    font-weight: 900;
+    src: local('Ubuntu'), url(./fonts/Ubuntu-Bold.ttf) format('opentype');
 }
+@font-face {
+    font-family: 'Ubuntu Mono';
+    src: local('UbuntuMono'), url(./fonts/UbuntuMono-Regular.ttf) format('opentype');
+}
+    
+    
