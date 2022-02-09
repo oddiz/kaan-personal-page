@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import FadeIn from "react-fade-in/lib/FadeIn";
 import {ReactComponent as DiscordLogo} from "../assets/discordlogo.svg"
-import { IoAtCircle } from "react-icons/io5";
+import { IoAtCircle, IoLogoGithub } from "react-icons/io5";
 
 const Content = styled.div`
     width: 100%;
@@ -55,6 +55,13 @@ const EmailLogoStyled = styled(IoAtCircle)`
     margin-right: 25px;
 `
 
+const GithubLogoStyled = styled(IoLogoGithub)`
+    width: 50px;
+    height: 50px;
+
+    margin-right: 25px;
+`
+
 function Contact() {
   return (
     <Content>
@@ -65,7 +72,25 @@ function Contact() {
                     <DiscordLogoStyled/>oddiz#9659
                 </ContactItem>
                 <ContactItem>
-                    <EmailLogoStyled />kaansarkaya@gmail.com
+                    <a
+                        style= {{display: "flex", flexDirection: "row", alignItems: "center"}}
+                        href = "mailto:kaansarkaya@gmail.com"
+                        target='_blank'
+                        rel='noopener noreferrer'
+                    >
+                        <EmailLogoStyled />kaansarkaya@gmail.com
+                    </a>
+                </ContactItem>
+                <ContactItem>
+                    <a
+                        style= {{display: "flex", flexDirection: "row", alignItems: "center"}}
+                        href = "https://github.com/oddiz"
+                        target='_blank'
+                        rel='noopener noreferrer'
+                    >
+                        <GithubLogoStyled />oddiz
+
+                    </a>
                 </ContactItem>
 
             </ContactBox>
