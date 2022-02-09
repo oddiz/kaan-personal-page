@@ -31,7 +31,8 @@ const Paragraph = styled.p`
     font-size: 1.2em;
     font-weight: 300;
 
-    max-width: 550px;
+    padding: 0px 10px;
+    max-width: 570px;
 
     margin:15px auto;
 

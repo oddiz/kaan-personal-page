@@ -46,4 +46,8 @@
     src: local('UbuntuMono'), url(./fonts/UbuntuMono-Regular.ttf) format('opentype');
 }
     
+@font-face {
+    font-family: 'Source Code Pro';
+    src: local('SourceCodePro'), url(./fonts/SourceCodePro-VariableFont_wght.ttf) format('opentype');
+}
     

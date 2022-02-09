@@ -49,7 +49,7 @@ const ProjectHeaderImage = styled.img`
 const ProjectBody = styled.div`
     width: 100%;
     height: 350px;
-    padding: 40px 20px;
+    padding: 25px 20px;
      
     box-sizing: border-box;
     
@@ -59,6 +59,7 @@ const ProjectBody = styled.div`
     
     display: flex;
     flex-direction: column;
+
 
     @media (max-height: 620px),
            (max-width: 600px) {
@@ -88,13 +89,13 @@ const ProjectTitle = styled.h1`
 
 const ProjectDescription = styled.p`
 
-    font-size: 1em;
+    font-size: 0.9em;
     font-weight: 300;
     margin-bottom: 40px;
 
-    text-align: left;
+    text-align: center;
     white-space: pre-line;
-
+    font-family: "Source Code Pro";
     @media (max-height: 620px),
            (max-width: 600px) {
             text-align: center;
@@ -125,7 +126,8 @@ const ProjectButton = styled.a`
 
     background: #225E5A;
     height: 40px;
-    width: 120px;
+    width: 140px;
+    margin-bottom: 15px;
 
     display: flex;
     flex-direction: column;

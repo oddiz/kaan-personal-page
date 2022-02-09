@@ -23,6 +23,12 @@ const Content = styled.div`
     justify-content: center;
     align-items: center;
 
+    @media (max-height: 800px) {
+        margin-top: 20vh;
+    }
+
+    transition: all 0.3s ease-in-out;
+
     z-index: 10;
 `
 

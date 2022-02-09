@@ -9,7 +9,8 @@ const NavbarContainer = styled.div`
     top: 0px;
 
     width: 100%;
-    height: ${props => props.activePage !== 1 ? "100px" : "50px"};
+    //height: ${props => props.activePage !== 1 ? "100px" : "50px"};
+    height: 100px;
     
     @media (max-height: 468px) {
         height: 50px;
