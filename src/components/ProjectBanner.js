@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-const BORDER_COLOR = "#285689";
+const BORDER_COLOR = "#03525F";
 const BORDER_THICKNESS = "1px";
 
 const ProjectBannerContainer = styled.div`

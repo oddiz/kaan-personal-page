@@ -9,6 +9,23 @@ import Projects from './pages/Projects';
 import Contact from './pages/Contact';
 
 
+const AppContainer = styled.div`
+    text-align: center;
+    background: ${props => props.backgroundColor};
+
+    width: 100vw;
+    height: 100vh;
+    min-height: 440px;
+
+    overflow: hidden;
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+
+    transition: background-color 0.8s cubic-bezier(.09,.67,.69,.99);
+`
 
 const Gradient1 = styled.span`
     position: fixed;
@@ -45,7 +62,7 @@ const Gradient3 = styled.span`
     width: 1280px;
     height: 1280px;
 
-    background: #fc8ffc1B;
+    background: #0000001a;;
 
     
 
@@ -111,6 +128,12 @@ function App() {
         "ABOUT ME", "PROJECTS", "CONTACT"
     ]
 
+    const backgroundColors =[
+        "#072038",
+        "#022c33",
+        "#173535",
+    ]
+
     function changeActivePage(index) {
         setActiveIndex(index);
         setLastPageChange(Date.now());
@@ -136,9 +159,9 @@ function App() {
     }
 
   return (
-    <div 
-        className="App" 
+    <AppContainer 
         onWheel = {(e) => wheelListener(e)}
+        backgroundColor = {backgroundColors[activeIndex]}
     >
     
         <Gradient1 className={"blob"} activeIndex = {activeIndex} />
@@ -158,7 +181,7 @@ function App() {
         <Footer>
             {activeIndex !== 2 && <DownArrow />}
         </Footer>
-    </div>
+    </AppContainer>
   );
 }
 

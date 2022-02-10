@@ -1,20 +1,6 @@
 
 
-.App {
-  text-align: center;
-  background: #072038;
 
-  width: 100vw;
-  height: 100vh;
-  min-height: 440px;
-
-  overflow: hidden;
-
-  display: flex;
-  flex-direction: column;
-
-  justify-content: center;
-}
 
 .blob {
     filter: blur(100px);
