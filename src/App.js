@@ -10,7 +10,7 @@ import Contact from './pages/Contact';
 
 const Gradient1 = styled.span`
     position: fixed;
-    top: -750px;
+    top: ${props => -props.activeIndex*1000 + -750}px;
     left: -750px;
 
     border-radius: 100%;
@@ -21,10 +21,12 @@ const Gradient1 = styled.span`
 
     filter: blur(100px);
     z-index: 0;
+    transition: all 0.2s cubic-bezier(.09,.67,.69,.99);
+
 `
 const Gradient2 = styled.span`
     position: fixed;
-    bottom: -500px;
+    bottom: ${props => props.activeIndex*1000 + -500}px;
     right: -500px;
 
     border-radius: 100%;
@@ -35,6 +37,44 @@ const Gradient2 = styled.span`
 
     filter: blur(100px);
     z-index: 0;
+
+    transition: all 0.2s cubic-bezier(.09,.67,.69,.99);
+
+`
+const Gradient3 = styled.span`
+    position: fixed;
+    top: ${props => -props.activeIndex*1000 + 1250}px;
+    left: -750px;
+
+    border-radius: 100%;
+    width: 1280px;
+    height: 1280px;
+
+    background: #fc8ffc21;
+
+    filter: blur(100px);
+    z-index: 0;
+
+    transition: all 0.2s cubic-bezier(.09,.67,.69,.99);
+
+
+`
+const Gradient4 = styled.span`
+    position: fixed;
+    bottom: ${props => props.activeIndex*1000 + -2500}px;
+    right: -500px;
+
+    border-radius: 100%;
+    width: 980px;
+    height: 980px;
+
+    background: #ffa87d2A;
+
+    filter: blur(100px);
+    z-index: 0;
+
+    transition: all 0.2s cubic-bezier(.09,.67,.69,.99);
+
 
 `
 
@@ -86,7 +126,6 @@ function App() {
     function changeActivePage(index) {
         setActiveIndex(index);
         setLastPageChange(Date.now());
-        console.log(index, Date.now());
     }
 
     function wheelListener(e) {
@@ -113,8 +152,10 @@ function App() {
         className="App" 
         onWheel = {(e) => wheelListener(e)}
     >
-        <Gradient1 />
-        <Gradient2 />
+        <Gradient1 activeIndex = {activeIndex} />
+        <Gradient2 activeIndex = {activeIndex} />
+        <Gradient3 activeIndex = {activeIndex} />
+        <Gradient4 activeIndex = {activeIndex} />
         <Navbar 
             activeIndex = {activeIndex}
             setActive = {changeActivePage}
