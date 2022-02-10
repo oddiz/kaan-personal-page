@@ -16,6 +16,12 @@
   justify-content: center;
 }
 
+.blob {
+    filter: blur(100px);
+    z-index: 0;
+    transition: all 0.8s cubic-bezier(0,1.08,.76,.99)
+}
+
 
 @font-face {
     font-family: 'Ubuntu';

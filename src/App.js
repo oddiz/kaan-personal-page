@@ -8,10 +8,12 @@ import Navbar from './components/Navbar';
 import Projects from './pages/Projects';
 import Contact from './pages/Contact';
 
+
+
 const Gradient1 = styled.span`
     position: fixed;
-    top: ${props => -props.activeIndex*1000 + -750}px;
-    left: -750px;
+    top: ${props => -props.activeIndex*100 + -85}vh;
+    left: -550px;
 
     border-radius: 100%;
     width: 1280px;
@@ -19,14 +21,11 @@ const Gradient1 = styled.span`
 
     background: #0943478A;
 
-    filter: blur(100px);
-    z-index: 0;
-    transition: all 0.2s cubic-bezier(.09,.67,.69,.99);
 
 `
 const Gradient2 = styled.span`
     position: fixed;
-    bottom: ${props => props.activeIndex*1000 + -500}px;
+    bottom: ${props => props.activeIndex*100 + -60}vh;
     right: -500px;
 
     border-radius: 100%;
@@ -35,45 +34,34 @@ const Gradient2 = styled.span`
 
     background: #102F53AA;
 
-    filter: blur(100px);
-    z-index: 0;
-
-    transition: all 0.2s cubic-bezier(.09,.67,.69,.99);
 
 `
 const Gradient3 = styled.span`
     position: fixed;
-    top: ${props => -props.activeIndex*1000 + 1250}px;
-    left: -750px;
+    top: ${props => -props.activeIndex*100 + 125}vh;
+    left: -950px;
 
     border-radius: 100%;
     width: 1280px;
     height: 1280px;
 
-    background: #fc8ffc21;
+    background: #fc8ffc1B;
 
-    filter: blur(100px);
-    z-index: 0;
-
-    transition: all 0.2s cubic-bezier(.09,.67,.69,.99);
+    
 
 
 `
 const Gradient4 = styled.span`
     position: fixed;
-    bottom: ${props => props.activeIndex*1000 + -2500}px;
+    bottom: ${props => props.activeIndex*100 + -260}vh;
     right: -500px;
 
     border-radius: 100%;
     width: 980px;
     height: 980px;
 
-    background: #ffa87d2A;
+    background: #37d75f1f;
 
-    filter: blur(100px);
-    z-index: 0;
-
-    transition: all 0.2s cubic-bezier(.09,.67,.69,.99);
 
 
 `
@@ -152,10 +140,11 @@ function App() {
         className="App" 
         onWheel = {(e) => wheelListener(e)}
     >
-        <Gradient1 activeIndex = {activeIndex} />
-        <Gradient2 activeIndex = {activeIndex} />
-        <Gradient3 activeIndex = {activeIndex} />
-        <Gradient4 activeIndex = {activeIndex} />
+    
+        <Gradient1 className={"blob"} activeIndex = {activeIndex} />
+        <Gradient2 className={"blob"} activeIndex = {activeIndex} />
+        <Gradient3 className={"blob"} activeIndex = {activeIndex} />
+        <Gradient4 className={"blob"} activeIndex = {activeIndex} />
         <Navbar 
             activeIndex = {activeIndex}
             setActive = {changeActivePage}
