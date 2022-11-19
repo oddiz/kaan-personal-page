@@ -57,9 +57,9 @@ function Projects() {
         <Content>
             <FadeInFlexed>
                 <ProjectBanner 
-                    title="Ecodiet"
+                    title="Ecofood"
                     description={`Skillpoint calculator based on what you eat for Eco game.\n\nThis is the first app that I've made after completing an Udemy course for JS and web developement.\n\nFeatures a simple vanilla js frontend + backend for storing highscores.`}
-                    link="https://ecodiet.kaansarkaya.com/"
+                    link="https://ecofood.app/"
                     backgroundImage="img/ecodiet_logo.png"
                     backgroundColor="#5A5C84"
                     miniMode = {miniMode}
