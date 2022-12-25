@@ -59,7 +59,8 @@ function Landing() {
                 <Title>Hi there,</Title>
 
                 <Paragraph>
-                    I’m Kaan “oddiz” Şarkaya, I love <Emphasized inputColor="#4BD6F4">computers</Emphasized>,{" "}
+                    I’m Kaan “oddiz” Şarkaya, I am a <Emphasized inputColor="#FF67D8">MD</Emphasized>, I love{" "}
+                    <Emphasized inputColor="#4BD6F4">computers</Emphasized>,{" "}
                     <Emphasized inputColor="#B3FF52">technology</Emphasized> and writing{" "}
                     <Emphasized inputColor="#FF9E47">spaghetti</Emphasized> code.
                 </Paragraph>
