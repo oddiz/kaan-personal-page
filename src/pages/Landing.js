@@ -53,7 +53,7 @@ function Landing() {
   return (
     <Content>
       <FadeIn delay={300}>
-        <PfpPicture src="img/pfp.jpg" />
+        <PfpPicture src="img/profile.png" />
         <Title>Hi there,</Title>
 
         <Paragraph>
