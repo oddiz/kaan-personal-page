@@ -1,12 +1,11 @@
 import React from "react";
 import App from "./App";
 import "./index.css";
+import ReactDOM from "react-dom";
 
-export default function NextIndexWrapper() {
-  return (
-    <React.StrictMode>
-      <App />
-    </React.StrictMode>
-  );
-}
-
+ReactDOM.render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>,
+  document.getElementById("root")
+);
